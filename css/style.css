@@ -7,16 +7,19 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
+    background-color: #000a1f;
     color: #fff;
     line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 2rem;
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,6 +170,31 @@ h2 {
     margin-bottom: 0.25rem;
 }
 
+/* Gallery Section */
+.gallery-container {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 2rem 0;
+}
+
+.gallery-container img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+.gallery-container img:hover {
+    width: 25%;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
 /* Contact Section */
 .contact-info {
     display: grid;
@@ -226,5 +254,13 @@ h2 {
     
     .info-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .gallery-container {
+        height: 300px;
+    }
+    
+    .gallery-container img:hover {
+        width: 40%;
     }
 }
